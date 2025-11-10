@@ -1,0 +1,34 @@
+This C program is designed to manage a Smart Hotel Room Booking and Billing System for multiple customers.
+It calculates each customer's room charges, service charges, discounts, GST, and the final bill, and finally prints a hotel summary report with total rooms booked, total revenue, and the highest and lowest bills of the day.
+Includes the standard input/output header file so the program can use printf() and scanf().
+customers → number of customers.
+room_type → the type of room chosen (1, 2, or 3).
+num_days → number of days the customer stays.
+total_rooms → keeps track of total rooms booked.
+i → loop counter for each customer.
+rate → cost per night for selected room.
+base_fare → room cost for all days (rate × num_days).
+add_services → cost for optional services (breakfast, Wi-Fi, gym).
+sub_total → total before tax (base_fare + services - discount).
+discount → 10% discount if subtotal > ₹10,000.
+gst → 12% Goods and Services Tax.
+final_bill → total after adding GST.
+total_revenue → total money earned from all customers.
+highest_bill → the maximum bill of the day.
+lowest_bill → initialized with a large value (so the first real bill replaces it).
+name → string for customer’s name.
+breakfast, gym_access, wifi → store 'Y' or 'N'.
+Prompts user to enter how many customers they want to process.
+Stores that number in customers.
+Sets room rate per night:
+Deluxe → ₹2500
+Super Deluxe → ₹4000
+Suite → ₹6000
+If invalid input, defaults to Deluxe.
+Asks whether the customer wants each extra service.
+Notice " %c" has a space before %c — this avoids reading leftover newline characters from previous inputs.
+Adds service costs based on customer’s “Y/N” choices:
+Breakfast ₹300/day
+Wi-Fi ₹100/day
+Gym ₹200/day
+  
